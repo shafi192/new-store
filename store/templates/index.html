@@ -142,7 +142,7 @@
         </div>
         <div class="col-lg-4 col-6 text-right">
           <p class="m-0">what's app</p>
-          <h5 class="m-0">03352775393</h5>
+          <h5 class="m-0"><h1>03352775393</h1></h5>
         </div>
       </div>
     </div>
@@ -299,11 +299,10 @@
                     <h1
                       class="display-4 text-white mb-3 animate__animated animate__fadeInDown"
                     >
-                      Men Fashion
+                      {{front.name}}
                     </h1>
                     <p class="mx-md-5 px-5 animate__animated animate__bounceIn">
-                      Lorem rebum magna amet lorem magna erat diam stet. Sadips
-                      duo stet amet amet ndiam elitr ipsum diam
+                     {{front.description}}
                     </p>
                     <a
                       class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp"
@@ -318,10 +317,11 @@
           </div>
         </div>
         <div class="col-lg-4">
+          {%for market in market%}
           <div class="product-offer mb-30" style="height: 200px">
             <img
               class="img-fluid"
-              src="{% static 'img/offer-1.jpg' %}"
+              src="{{market.img.url}}"
               alt=""
             />
             <div class="offer-text">
@@ -330,14 +330,7 @@
               <a href="" class="btn btn-primary">Shop Now</a>
             </div>
           </div>
-          <div class="product-offer mb-30" style="height: 200px">
-            <img class="img-fluid" src="img/offer-2.jpg" alt="" />
-            <div class="offer-text">
-              <h6 class="text-white text-uppercase">Save 20%</h6>
-              <h3 class="text-white mb-3">Special Offer</h3>
-              <a href="" class="btn btn-primary">Shop Now</a>
-            </div>
-          </div>
+         {%endfor%}
         </div>
       </div>
     </div>

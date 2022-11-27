@@ -45,3 +45,6 @@ class Contact(models.Model):
     
     def __str__(self):
         return self.name
+
+class Market(models.Model):
+    img = models.ImageField(upload_to='pics')        
